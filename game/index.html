@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOLMAR — an open-world crime game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="menu" class="overlay">
+  <div class="card">
+    <h1>SOLMAR</h1>
+    <p class="tag">An open-world crime story on a sun-soaked coast.<br>
+    Six years away. One aunt, one debt, and a city that grew teeth.</p>
+    <div class="buttons">
+      <button id="newBtn" type="button">New game</button>
+      <button id="continueBtn" type="button">Continue</button>
+    </div>
+    <div class="controls">
+      <p><b>On foot</b> — WASD move · SHIFT run · E enter car / talk · F fight · mouse aim, click to shoot (once armed)</p>
+      <p><b>In a car</b> — WASD drive · SPACE handbrake · E exit</p>
+      <p><b>Always</b> — P or ESC pause · M mute · progress saves itself after every job</p>
+      <p class="story">Play Marlo Reyes through five story jobs — or ignore them all and run fares,
+      hunt the twenty beach shells, and see how many stars Solmar PD can pin on you.</p>
+    </div>
+  </div>
+</div>
+
+<div id="pause" class="overlay hidden">
+  <div class="card small">
+    <h2>Paused</h2>
+    <div class="buttons">
+      <button id="resumeBtn" type="button">Resume</button>
+      <button id="saveBtn" type="button">Save game</button>
+      <button id="restartBtn" type="button">Restart mission</button>
+      <button id="quitBtn" type="button">Save &amp; title</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

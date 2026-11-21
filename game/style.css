@@ -1,0 +1,134 @@
+/* SOLMAR — page chrome: a full-window canvas and two glass menu cards. */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #0c1420;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #fff;
+}
+
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(6, 10, 18, 0.42), rgba(6, 10, 18, 0.66));
+  z-index: 10;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.card {
+  max-width: 620px;
+  width: calc(100vw - 48px);
+  padding: 34px 40px 30px;
+  border-radius: 18px;
+  background: rgba(10, 15, 24, 0.82);
+  border: 1px solid rgba(255, 210, 63, 0.35);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.card.small {
+  max-width: 340px;
+}
+
+.card h1 {
+  margin: 0 0 6px;
+  font-size: 64px;
+  letter-spacing: 0.14em;
+  font-weight: 900;
+  background: linear-gradient(92deg, #ffd23f 10%, #ff7b54 55%, #ff4e8a 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card h2 {
+  margin: 0 0 18px;
+  font-size: 30px;
+  letter-spacing: 0.08em;
+}
+
+.tag {
+  margin: 0 0 22px;
+  font-size: 16px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+button {
+  font: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 210, 63, 0.6);
+  background: #ffd23f;
+  color: #221a05;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffdf6b;
+}
+
+button#continueBtn,
+.card.small button {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+button#continueBtn:hover,
+.card.small button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.card.small .buttons {
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 0;
+}
+
+.controls {
+  text-align: left;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 16px;
+}
+
+.controls p {
+  margin: 0 0 7px;
+}
+
+.controls .story {
+  color: rgba(255, 233, 168, 0.9);
+}
